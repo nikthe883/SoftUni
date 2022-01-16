@@ -8,12 +8,10 @@ time_per_meter = float(input())
 water_resistance_meters = 15
 water_resistance_seconds = 12.5
 
-
-
 a = distance_to_swim * time_per_meter
 b = math.floor(distance_to_swim / water_resistance_meters) * water_resistance_seconds
 total_time = a + b
-print(a,b)
+
 
 if total_time < world_record:
     print(f"Yes, he succeeded! The new world record is {total_time:.2f} seconds.")
@@ -24,4 +22,3 @@ elif total_time >= world_record:
 
 
 
-# math floor was the problem
