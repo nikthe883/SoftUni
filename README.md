@@ -15,3 +15,4 @@ TO DO :
 1. Write explanation comments for more complicated tasks with refference
 2. Rewrite some of the assignments
 3. Finish all assigments without exams till the end of the week 
+4. Add a file with mistakes I have encountered and theis fixes
