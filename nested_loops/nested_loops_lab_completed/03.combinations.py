@@ -1,3 +1,4 @@
+
 n = int(input())
 combinations = 0
 for x1 in range(0,n + 1):

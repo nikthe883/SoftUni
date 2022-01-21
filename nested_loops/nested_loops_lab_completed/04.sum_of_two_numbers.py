@@ -4,6 +4,7 @@ end = int(input())
 magic_number = int(input())
 combination = 0
 success = False
+
 for x in range(begin, end + 1):
     for y in range(begin, end + 1):
         combination += 1
