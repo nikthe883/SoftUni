@@ -16,7 +16,7 @@ if calculator % 2 == 0:
     even = True
 
 if operator == "+" or operator == "-" or operator == "*":
-    if even :
+    if even:
         print(f"{number1} {operator} {number2} = {calculator} - even")
     elif not even:
         print(f"{number1} {operator} {number2} = {calculator} - odd")
