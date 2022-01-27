@@ -1,2 +1,2 @@
 # SoftUni
-Solved exercise from Soft Uni python basic module 
+Solved exercise from Soft Uni python 
