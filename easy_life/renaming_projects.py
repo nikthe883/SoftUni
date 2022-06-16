@@ -8,7 +8,3 @@ final_output = output.replace(" ", "_")
 
 
 print(final_output)
-
-
-
-
