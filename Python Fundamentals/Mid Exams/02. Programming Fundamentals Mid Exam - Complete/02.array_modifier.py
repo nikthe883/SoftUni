@@ -6,7 +6,6 @@ while command[0] != "end":
     if command[0] == "swap":
         user_input[int(command[1])], user_input[int(command[2])] = user_input[int(command[2])], user_input[int(command[1])]
 
-
     elif command[0] == "multiply":
         user_input[int(command[1])] = user_input[int(command[1])] * user_input[int(command[2])]
 
