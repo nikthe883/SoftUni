@@ -16,6 +16,7 @@ class Zoo:
             self.birds.append(name)
 
         Zoo.__animals += 1
+
     def get_info(self, species):
         result = ""
         if species == "mammal":
