@@ -8,5 +8,4 @@ for i in user_input:
             counts[i] = 0
         counts[i] += 1
 
-
-[print(f"{k} -> {v}") for k,v in counts.items()]
+[print(f"{k} -> {v}") for k, v in counts.items()]
