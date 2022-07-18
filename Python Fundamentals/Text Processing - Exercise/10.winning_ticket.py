@@ -9,7 +9,7 @@ def winning_ticket(ticket):
     right_side = ticket[10:]
 
     for winning_symbol in winning:
-        for repetition in range(10, 5 , -1):
+        for repetition in range(10, 5, -1):
             winning_symbol_rep = winning_symbol * repetition
             if winning_symbol_rep in left_side and winning_symbol_rep in right_side:
                 if repetition == 10:
