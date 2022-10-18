@@ -22,7 +22,6 @@ while magic and materials:
         materials.append(materials_last)
         continue
 
-
     product = materials_last * magic_first
 
     if product < 0:
