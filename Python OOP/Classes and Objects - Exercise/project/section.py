@@ -9,11 +9,11 @@ class Section:
     def add_task(self, new_task: Task):
         if new_task not in self.tasks:
             self.tasks.append(new_task)
-            return f"Task {new_task.details()} is added to the section "
+            return f"Task {new_task.details()} is added to the section"
         else:
             return f"Task is already in the section {self.name}"
         
-    def complet_task(self, task_name):
+    def complete_task(self, task_name):
         for i in self.tasks:
             if task_name == i.name:
                 i.completed = True
@@ -37,5 +37,4 @@ class Section:
             result += f"{task.details()}\n"
         return result
     
-
 

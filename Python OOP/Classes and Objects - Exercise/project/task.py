@@ -1,5 +1,5 @@
 
-class Task():
+class Task:
     comments = []
     completed = False
 
