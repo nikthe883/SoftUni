@@ -16,11 +16,26 @@ class Section:
     def complet_task(self, task_name):
         for i in self.tasks:
             if task_name == i.name:
-                
+                i.completed = True
+                return f"Completed task {task_name}"
+            else:
+                return f"Could not find task with the name {task_name}"
             
-
+            
     def clean_section(self):
-        pass
+        cleaned = 0
+        for i in self.tasks:
+            if i.completed == True:
+                cleaned += 1
+                self.tasks.remove(i)
+        return f"Cleared {cleaned} tasks."
 
     def view_section(self):
-        pass
+        result = f"Section {self.name}:\n"
+
+        for task in self.tasks:
+            result += f"{task.details()}\n"
+        return result
+    
+
+
