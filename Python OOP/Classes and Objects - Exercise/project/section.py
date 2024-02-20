@@ -1,34 +1,33 @@
-from task import Task
+from project.task import Task
+
 
 class Section:
-    tasks = []
-
-    def __init__(self, name) -> None:
+    def __init__(self, name: str):
         self.name = name
+        self.tasks = []
 
     def add_task(self, new_task: Task):
-        if new_task not in self.tasks:
-            self.tasks.append(new_task)
-            return f"Task {new_task.details()} is added to the section"
-        else:
-            return f"Task is already in the section {self.name}"
-        
-    def complete_task(self, task_name):
-        for i in self.tasks:
-            if task_name == i.name:
-                i.completed = True
+        for task in self.tasks:
+            if task.name == new_task.name:
+                return f"Task is already in the section {self.name}"
+        self.tasks.append(new_task)
+        return f"Task {new_task.details()} is added to the section"
+
+    def complete_task(self, task_name: str):
+        for task in self.tasks:
+            if task.name == task_name:
+                task.completed = True
                 return f"Completed task {task_name}"
-            else:
-                return f"Could not find task with the name {task_name}"
-            
-            
+        return f"Could not find task with the name {task_name}"
+
     def clean_section(self):
-        cleaned = 0
-        for i in self.tasks:
-            if i.completed == True:
-                cleaned += 1
-                self.tasks.remove(i)
-        return f"Cleared {cleaned} tasks."
+        cleared_tasks = 0
+
+        for task in self.tasks:
+            if task.completed:
+                self.tasks.remove(task)
+                cleared_tasks += 1
+        return f"Cleared {cleared_tasks} tasks."
 
     def view_section(self):
         result = f"Section {self.name}:\n"
@@ -36,5 +35,3 @@ class Section:
         for task in self.tasks:
             result += f"{task.details()}\n"
         return result
-    
-
