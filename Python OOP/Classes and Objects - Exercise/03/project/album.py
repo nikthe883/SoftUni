@@ -42,3 +42,5 @@ class Album:
 
         for song in self.songs:
             result += f"{song.get_info()}\n"
+
+        return result
