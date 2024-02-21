@@ -1,4 +1,5 @@
-from album import Album
+from project.album import Album
+
 
 class Band:
     
@@ -32,3 +33,7 @@ class Band:
             result += f"{album.details()}\n"
 
         return result
+    
+
+
+

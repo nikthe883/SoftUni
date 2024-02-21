@@ -1,5 +1,5 @@
 
-from song import Song
+from project.song import Song
 
 class Album:
 
@@ -15,6 +15,7 @@ class Album:
             return f"Cannot add songs. Album is published."
         if song in self.songs:
             return f"Song is already in the album."
+        
         
         self.songs.append(song)
         return f"Song {song.name} has been added to the album {self.name}."
@@ -41,6 +42,6 @@ class Album:
         result = f"Album {self.name}\n"
 
         for song in self.songs:
-            result += f"{song.get_info()}\n"
+            result += f"== {song.get_info()}\n"
 
         return result
