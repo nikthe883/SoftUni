@@ -1,5 +1,5 @@
 from .animal import Animal
 
 class  Dog(Animal):
-    def bark(self):
+    def  bark(self):
         return "barking..."
