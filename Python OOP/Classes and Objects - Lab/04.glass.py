@@ -2,6 +2,7 @@ class Glass:
 
     capacity = 250
 
+
     def __init__(self) -> None:
         self.content = 0
 
