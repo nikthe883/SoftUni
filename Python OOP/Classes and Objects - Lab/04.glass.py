@@ -14,6 +14,7 @@ class Glass:
             
             return f"Cannot add {ml} ml"
     
+    
     def empty(self):
         self.content = 0
         return "Glass is now empty"
