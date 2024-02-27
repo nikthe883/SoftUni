@@ -19,6 +19,7 @@ class Glass:
         self.content = 0
         return "Glass is now empty"
     
+    
     def info(self):
         return f"{self.capacity - self.content} ml left"
 
