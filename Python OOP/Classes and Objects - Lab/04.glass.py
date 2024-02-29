@@ -6,6 +6,7 @@ class Glass:
     def __init__(self) -> None:
         self.content = 0
 
+
     def fill(self,ml):
         if ml + self.content <= self.capacity:
             self.content += ml
