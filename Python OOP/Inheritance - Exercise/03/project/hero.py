@@ -1,4 +1,5 @@
 class Hero:
+    
     def __init__(self,username, level) -> None:
     
         self.username = username
