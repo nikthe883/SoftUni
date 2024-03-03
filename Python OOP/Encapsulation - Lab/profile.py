@@ -36,7 +36,7 @@ class Profile:
     
     def __str__(self) -> str:
 
-        return f"You have a profile with a username: {self.username} and password: {'*' * len(self.password)}"
+        return f'You have a profile with username: "{self.username}" and password: {"*" * len(self.password)}'
     
 
 
