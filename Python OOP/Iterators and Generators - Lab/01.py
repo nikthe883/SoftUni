@@ -1,17 +1,19 @@
 class custom_range():
-    def __init__(self, start, stop):
+    def __init__(self, start, end):
         self.start = start
-        self.stop = stop
+        self.end = end
+        self.current = start
 
     def __iter__(self):
         return self
-    
+
     def __next__(self):
-        if self.start >= self.stop:
+        if self.current > self.end:
             raise StopIteration
         else:
-            self.start += 1
-            return self.start
+            result = self.current
+            self.current += 1
+            return result
 
 
 one_to_ten = custom_range(1, 10)
