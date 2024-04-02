@@ -1,4 +1,4 @@
-from project.base_peak import BasePeak
+from project.peaks.base_peak import BasePeak
 
 
 
