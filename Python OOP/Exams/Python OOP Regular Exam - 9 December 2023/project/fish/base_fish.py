@@ -1,0 +1,31 @@
+from abc import ABC, abstractmethod
+
+
+class BaseFish(ABC):
+
+    def __init__(self, name, points, time_to_catch):
+        self.name = name
+        self.points = points
+        self.time_to_catch = time_to_catch
+
+    @property
+    def name(self):
+        return self.__name
+    
+    @name.setter
+    def name(self, value):
+        if not value.strip():
+            raise ValueError("Fish name should be determined!")
+        
+    @property
+    def points(self):
+        return self.__points
+    
+    @points.setter
+    def points(self, value):
+        if 1 <= value <= 10:
+            raise ValueError("Points should be a value ranging from 1 to 10!")
+        
+    @abstractmethod
+    def fish_details(self):
+        pass
