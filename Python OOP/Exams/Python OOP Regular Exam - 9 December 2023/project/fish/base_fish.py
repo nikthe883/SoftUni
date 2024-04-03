@@ -16,6 +16,7 @@ class BaseFish(ABC):
     def name(self, value):
         if not value.strip():
             raise ValueError("Fish name should be determined!")
+        self.__name = value
         
     @property
     def points(self):
@@ -25,6 +26,7 @@ class BaseFish(ABC):
     def points(self, value):
         if 1 <= value <= 10:
             raise ValueError("Points should be a value ranging from 1 to 10!")
+        self.__points = value
         
     @abstractmethod
     def fish_details(self):
