@@ -1,9 +1,7 @@
-from divers.free_diver import FreeDiver
-from divers.scuba_diver import ScubaDiver
-from fish.predatory_fish import PredatoryFish
-from fish.deep_sea_fish import DeepSeaFish
-
-
+from project.divers.free_diver import FreeDiver
+from project.divers.scuba_diver import ScubaDiver
+from project.fish.predatory_fish import PredatoryFish
+from project.fish.deep_sea_fish import DeepSeaFish
 
 
 class NauticalCatchChallengeApp:
@@ -13,17 +11,6 @@ class NauticalCatchChallengeApp:
     def __init__(self):
         self.divers = []
         self.fish_list = []
-
-        # Helper methods
-
-    def _get_diver(self, diver_name: str):
-        diver = [d for d in self.divers if d.name == diver_name]
-        return diver[0] if diver else None
-
-    def _get_fish(self, fish_name: str):
-        fish = [f for f in self.fish_list if f.name == fish_name]
-        return fish[0] if fish else None
-
 
     def dive_into_competition(self, diver_type: str, diver_name: str):
         if diver_type not in self.DIVER_TYPES:
@@ -36,7 +23,6 @@ class NauticalCatchChallengeApp:
         new_diver = self.DIVER_TYPES[diver_type](diver_name)
         self.divers.append(new_diver)
         return f"{diver_name} is successfully registered for the competition as a {diver_type}."
-    
 
     def swim_into_competition(self, fish_type: str, fish_name: str, points: float):
         if fish_type not in self.FISH_TYPES:
@@ -112,3 +98,13 @@ class NauticalCatchChallengeApp:
         result = "**Nautical Catch Challenge Statistics**\n"
         result += "\n".join(str(d) for d in sorted_divers)
         return result
+
+    # Helper methods
+
+    def _get_diver(self, diver_name: str):
+        diver = [d for d in self.divers if d.name == diver_name]
+        return diver[0] if diver else None
+
+    def _get_fish(self, fish_name: str):
+        fish = [f for f in self.fish_list if f.name == fish_name]
+        return fish[0] if fish else None

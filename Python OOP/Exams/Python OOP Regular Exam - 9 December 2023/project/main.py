@@ -1,4 +1,4 @@
-from nautical_catch_challenge_app import NauticalCatchChallengeApp
+from project.nautical_catch_challenge_app import NauticalCatchChallengeApp
 
 nautical_catch_challenge = NauticalCatchChallengeApp()
 

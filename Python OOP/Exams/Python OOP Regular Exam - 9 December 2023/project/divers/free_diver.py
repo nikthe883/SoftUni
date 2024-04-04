@@ -1,5 +1,5 @@
 
-from base_diver import BaseDiver
+from project.divers.base_diver import BaseDiver
 
 
 
