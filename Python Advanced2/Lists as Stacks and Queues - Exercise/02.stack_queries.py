@@ -10,6 +10,7 @@ for _ in range(n):
         if len(stack) > 0:
             stack.pop()
     elif command[0] == '3':
+        
         if stack:
             print(max(stack))
     elif command[0] == "4":
